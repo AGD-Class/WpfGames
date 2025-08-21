@@ -91,7 +91,7 @@ namespace WpfGames.Games.Snake
             if (!_isGameRunning || _snakeBody.Last == null) return;
 
             double elapsed = (DateTime.Now - _lastUpdateTime).TotalMilliseconds;
-            if (elapsed < 20) return;
+            if (elapsed < BaseUpdateInterval) return;
 
             _lastUpdateTime = DateTime.Now;
             

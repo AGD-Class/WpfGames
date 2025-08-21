@@ -284,6 +284,7 @@ namespace WpfGames.Games.Minesweeper
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             mainWindow?.MainFrame?.Navigate(new HomePage(mainWindow.MainFrame));
+            GC.Collect();
         }
 
 
@@ -291,6 +292,7 @@ namespace WpfGames.Games.Minesweeper
         {
             InitializeGame();
             DrawGameBoard();
+            GC.Collect();
         }
         #endregion
     }
