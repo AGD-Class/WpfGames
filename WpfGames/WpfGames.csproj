@@ -10,8 +10,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Games\RGB\" />
-    <Folder Include="Resources\Converters\" />
+    <Compile Remove="Games\RGB\**" />
+    <Compile Remove="Resources\Converters\**" />
+    <EmbeddedResource Remove="Games\RGB\**" />
+    <EmbeddedResource Remove="Resources\Converters\**" />
+    <None Remove="Games\RGB\**" />
+    <None Remove="Resources\Converters\**" />
+    <Page Remove="Games\RGB\**" />
+    <Page Remove="Resources\Converters\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Resources\Models\" />
   </ItemGroup>
 

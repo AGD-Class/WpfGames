@@ -1,0 +1,9 @@
+﻿<Window x:Class="RPG.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF 战棋 RPG Demo" Height="720" Width="1280">
+    <Grid>
+        <!-- 场景承载容器 -->
+        <ContentControl x:Name="SceneHost" />
+    </Grid>
+</Window>

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfGames", "WpfGames\WpfGames.csproj", "{9758F5C5-F2D0-4776-8A86-8CF3886CAA9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPG", "RPG\RPG.csproj", "{DDE4FE38-D4F6-4AA3-97D2-9A216125AE5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9758F5C5-F2D0-4776-8A86-8CF3886CAA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9758F5C5-F2D0-4776-8A86-8CF3886CAA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9758F5C5-F2D0-4776-8A86-8CF3886CAA9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDE4FE38-D4F6-4AA3-97D2-9A216125AE5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDE4FE38-D4F6-4AA3-97D2-9A216125AE5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDE4FE38-D4F6-4AA3-97D2-9A216125AE5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDE4FE38-D4F6-4AA3-97D2-9A216125AE5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

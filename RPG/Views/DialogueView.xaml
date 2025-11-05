@@ -1,0 +1,16 @@
+<UserControl x:Class="RPG.Views.DialogueView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:RPG.ViewModels">
+    <UserControl.DataContext>
+        <vm:DialogueViewModel />
+    </UserControl.DataContext>
+    <Grid Background="#111">
+        <Border Height="200" VerticalAlignment="Bottom" Background="#222" CornerRadius="8" Margin="16">
+            <StackPanel Margin="12">
+                <TextBlock x:Name="Speaker" FontWeight="Bold" Foreground="White" />
+                <TextBlock x:Name="DialogueText" TextWrapping="Wrap" Foreground="White" Margin="0,8,0,0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</UserControl>

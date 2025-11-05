@@ -1,0 +1,14 @@
+<UserControl x:Class="RPG.Views.ManageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:RPG.ViewModels">
+    <UserControl.DataContext>
+        <vm:ManageViewModel />
+    </UserControl.DataContext>
+    <Grid Background="#0b0b0b">
+        <StackPanel Margin="16">
+            <TextBlock Text="经营界面" Foreground="White" FontSize="20" />
+            <ListBox ItemsSource="{Binding Buildings}" DisplayMemberPath="Name" Height="300" Margin="0,8,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
