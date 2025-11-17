@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="RPG.Views.Controls.StoryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RPG.Views.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <!-- 背景图片 -->
+        <Image Source="{Binding BackgroundImage}" Stretch="UniformToFill"/>
+
+        <!-- 角色立绘 (左右) -->
+        <Image x:Name="LeftCharacter" HorizontalAlignment="Left"  Source="{Binding LeftCharacterImage}" Opacity="0.8"/>
+        <Image x:Name="RightCharacter" HorizontalAlignment="Right" Source="{Binding RightCharacterImage}" Opacity="0.8"/>
+
+        <!-- 对话框 -->
+        <Border Background="#AA000000" VerticalAlignment="Bottom" Height="150">
+            <TextBlock x:Name="DialogueTextBlock" Text="{Binding CurrentText}" Foreground="White" FontSize="16" Margin="20" TextWrapping="Wrap"/>
+        </Border>
+
+        <!-- 继续提示 (闪烁动画) -->
+        <TextBlock Text="▼" Foreground="White" FontSize="24" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <ScaleTransform x:Name="ContinuePromptScale"/>
+            </TextBlock.RenderTransform>
+            <TextBlock.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleX" To="0.8" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="Forever"/>
+                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.ScaleY" To="0.8" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </TextBlock.Triggers>
+        </TextBlock>
+    </Grid>
+</UserControl>
